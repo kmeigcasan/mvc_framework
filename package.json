@@ -12,22 +12,23 @@
   "dependencies": {
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
-    "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "chromedriver": "^88.0.0",
     "connect-redis": "^5.0.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "faker": "^5.2.0",
     "js-yaml": "^4.0.0",
     "md5": "^2.3.0",
+    "pg": "^8.5.1",
+    "redis": "^3.0.2",
+    "socket.io": "^3.0.5"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
     "mocha": "^8.2.1",
     "mochawesome": "^6.2.1",
     "nodemon": "^2.0.7",
-    "pg": "^8.5.1",
-    "redis": "^3.0.2",
-    "selenium-webdriver": "^4.0.0-alpha.8",
-    "socket.io": "^3.0.5"
+    "chromedriver": "^88.0.0",
+    "faker": "^5.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.8"
   }
 }
