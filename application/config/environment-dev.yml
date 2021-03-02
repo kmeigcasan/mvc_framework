@@ -1,9 +1,0 @@
-PORT: 1433
-HOSTNAME: 127.0.0.1
-
-DATABASE:
-  user: postgres
-  host: localhost
-  database: the_wall_express
-  password: admin
-  port: 5432
