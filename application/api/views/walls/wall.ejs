@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="The Wall">
+        <meta name="author" content="Karen Marie E. Igcasan">
+        <link rel="stylesheet" href="../stylesheets/wall_style.css"/>
+    </head>
+    <body>
+        <nav>
+            <h1 id="page_name">CodingDojo Wall</h1>
+            <p>Welcome <%=current_user.first_name%></p>
+            <a href="/logoff" id="logoff">Logoff</a>
+        </nav>        
+        <h2>Post a message</h2>
+        <form action="/wall/message" method="post">
+            <textarea name="message_input"></textarea>
+            <input type="submit" id="post_message" value="Post a message"/>
+        </form>
+<%  for(const m_id in output) { %>
+        <h3><%=output[m_id].header%></h3>
+        <p><%=output[m_id].body%></p>
+<%      for(const comment of output[m_id].comments) { %>
+        <h4><%=comment.header%></h4>
+        <p><%=comment.body%></p>
+<%      } %>
+        <form action="/wall/comment" method="post" class="comment_form">
+            <input type="hidden" name="message_id" value=<%=m_id%> />
+            <label for="comment_input">Post a comment</label>
+            <textarea name="comment_input"></textarea>               
+            <input type="submit" id="post_comment" value="Post a comment"/>
+        </form> 
+<%  } %>
+        <%-profiler%>
+    </body>
+</html>

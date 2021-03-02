@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Login and Registration">
+        <meta name="author" content="Karen Marie E. Igcasan">
+        <link rel="stylesheet" type="text/css" href="../stylesheets/home_style.css"/>
+    </head>   
+    <body>
+        <div class="error" id="error"><%=validation%></div>
+        <h1 id="page_name">Register</h1>
+        <form action="register/validate" method="POST">
+            First name: <input type="text" name="first_name">
+            Last name: <input type="text" name="last_name">
+            Email address: <input type="text" name="email">
+            Password: <input type="password" name="password">
+            Confirm Password: <input type="password" name="confirm_password"><br>
+            
+            <input type="submit" name="submit" value="Register">
+            <a href="login">Already have an account? Log in</a>
+        </form>
+    </body>
+</html>
